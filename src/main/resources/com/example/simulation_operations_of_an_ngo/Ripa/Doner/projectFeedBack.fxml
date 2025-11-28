@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_operations_of_an_ngo.Ripa.Doner.ProjectFeedBackController">
+   <children>
+      <Label layoutX="164.0" layoutY="-1.0" prefHeight="38.0" prefWidth="191.0" text="Give Feedback">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutY="44.0" prefHeight="26.0" prefWidth="146.0" text="FeedbackId">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="feedbackIdTextfield" layoutX="122.0" layoutY="45.0" />
+      <Label layoutX="289.0" layoutY="44.0" prefHeight="26.0" prefWidth="146.0" text="DonorId">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="donarIdtextfield" layoutX="442.0" layoutY="45.0" />
+      <Label layoutX="7.0" layoutY="88.0" prefHeight="26.0" prefWidth="103.0" text="ProjectName">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="projectNamecombobox" layoutX="122.0" layoutY="89.0" prefWidth="150.0" />
+      <Label layoutX="289.0" layoutY="88.0" prefHeight="26.0" prefWidth="139.0" text="feedbackMessage">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="feedbackMessagetextfield" layoutX="442.0" layoutY="89.0" />
+      <Button layoutX="111.0" layoutY="123.0" mnemonicParsing="false" onAction="#sendFeedBack" prefHeight="38.0" prefWidth="191.0" text="Send FeedBack" />
+      <Button layoutX="325.0" layoutY="123.0" mnemonicParsing="false" onAction="#showAllfeedback" prefHeight="38.0" prefWidth="191.0" text="Show All feedBack" />
+      <TableView fx:id="tableView" layoutY="171.0" prefHeight="228.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="feedbackidcolumn" prefWidth="145.33331298828125" text="FeedbackId" />
+          <TableColumn fx:id="projectNameColumn" prefWidth="145.33334350585938" text="ProjectName" />
+            <TableColumn fx:id="donarIdColumn" prefWidth="153.99996948242188" text="DonorId" />
+            <TableColumn fx:id="feedbackMessageColumn" prefWidth="156.0" text="FeedbackMessage" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
