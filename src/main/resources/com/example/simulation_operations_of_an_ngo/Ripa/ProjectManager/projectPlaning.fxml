@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_operations_of_an_ngo.Ripa.ProjectManager.ProjectPlaningcontroller">
+   <children>
+      <Label layoutX="160.0" layoutY="5.0" prefHeight="33.0" prefWidth="209.0" text="Project Planning">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="6.0" layoutY="43.0" prefHeight="25.0" prefWidth="137.0" text="Project Title">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtProjectTitle" layoutX="139.0" layoutY="44.0" prefHeight="25.0" prefWidth="166.0" />
+      <Label layoutX="6.0" layoutY="78.0" prefHeight="25.0" prefWidth="137.0" text="Start Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpStartDate" layoutX="137.0" layoutY="80.0" />
+      <Label layoutX="6.0" layoutY="118.0" prefHeight="25.0" prefWidth="137.0" text="End Date">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dpEndDate" layoutX="138.0" layoutY="119.0" />
+      <Label layoutX="336.0" layoutY="43.0" prefHeight="27.0" prefWidth="126.0" text="Deliverables">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDeliverables" layoutX="469.0" layoutY="44.0" prefHeight="25.0" prefWidth="166.0" />
+      <Label layoutX="336.0" layoutY="79.0" prefHeight="27.0" prefWidth="126.0" text="Timeline Status">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbTimelineStatus" layoutX="469.0" layoutY="80.0" prefHeight="25.0" prefWidth="166.0" />
+      <Button layoutX="336.0" layoutY="119.0" mnemonicParsing="false" onAction="#planingProjectButton" prefHeight="25.0" prefWidth="126.0" text="Planing Project" />
+      <Button layoutX="477.0" layoutY="119.0" mnemonicParsing="false" onAction="#showAllProjectButton" prefHeight="25.0" prefWidth="126.0" text="Show All Project" />
+      <TableView fx:id="tableview" layoutY="156.0" prefHeight="244.0" prefWidth="635.0">
+        <columns>
+          <TableColumn fx:id="projectTitleColumn" prefWidth="129.33333837985992" text="Project Title" />
+          <TableColumn fx:id="startDateColumn" prefWidth="123.99996948242188" text="Start Date" />
+            <TableColumn fx:id="endcolumn" prefWidth="120.66664123535156" text="End Date" />
+            <TableColumn fx:id="deliveriesColumn" prefWidth="130.0" text="Deliverables" />
+            <TableColumn fx:id="timelineColumn" prefWidth="133.99996948242188" text="Timeline Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
