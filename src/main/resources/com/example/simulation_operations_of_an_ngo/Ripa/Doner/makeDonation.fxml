@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_operations_of_an_ngo.Ripa.Doner.MakeDonationController">
+   <children>
+      <Label layoutX="201.0" layoutY="7.0" prefHeight="36.0" prefWidth="185.0" text="Make Donation">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="7.0" layoutY="53.0" prefHeight="23.0" prefWidth="94.0" text="DonationId">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="donationIdTextfield" layoutX="126.0" layoutY="53.0" />
+      <Label layoutX="300.0" layoutY="53.0" prefHeight="23.0" prefWidth="94.0" text="DonorId">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="donRidtEXTFIELD" layoutX="436.0" layoutY="53.0" />
+      <Label layoutX="7.0" layoutY="94.0" prefHeight="26.0" prefWidth="119.0" text="ProjectName">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="projectNameNamecombobbox" layoutX="126.0" layoutY="95.0" prefWidth="150.0" />
+      <Label layoutX="287.0" layoutY="94.0" prefHeight="26.0" prefWidth="141.0" text="paymentMethod">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="paymentMethhodCombobox" layoutX="436.0" layoutY="95.0" prefWidth="150.0" />
+      <Label layoutX="7.0" layoutY="135.0" prefHeight="26.0" prefWidth="119.0" text="DonationType">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="donationtypeCombobox" layoutX="133.0" layoutY="136.0" prefWidth="150.0" />
+      <Label layoutX="287.0" layoutY="135.0" prefHeight="26.0" prefWidth="119.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="297.0" layoutY="141.0" prefHeight="26.0" prefWidth="119.0" text="Date">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="datePicker" layoutX="424.0" layoutY="134.0" />
+      <TableView fx:id="tableview" layoutX="7.0" layoutY="201.0" prefHeight="200.0" prefWidth="591.0">
+        <columns>
+          <TableColumn fx:id="donarIdColumn" prefWidth="122.0" text="Donation Id" />
+          <TableColumn fx:id="donationTypeColumn" prefWidth="118.66665649414062" text="DonationType" />
+            <TableColumn fx:id="projectNameColumn" prefWidth="120.0" text="Project Name" />
+            <TableColumn fx:id="paymentMethodColumn" prefWidth="126.66668701171875" text="Payment Method" />
+            <TableColumn fx:id="datecolumn" prefWidth="106.0" text="Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="85.0" layoutY="167.0" mnemonicParsing="false" onAction="#makedonationbutton" prefHeight="25.0" prefWidth="215.0" text="Make Donation" />
+      <Button layoutX="308.0" layoutY="167.0" mnemonicParsing="false" onAction="#showAllDonationButton" prefHeight="25.0" prefWidth="215.0" text=" Show all Donation" />
+      <Button layoutX="14.0" layoutY="1.0" mnemonicParsing="false" onAction="#backbutton" prefHeight="36.0" prefWidth="105.0" text="Back" />
+   </children>
+</AnchorPane>
