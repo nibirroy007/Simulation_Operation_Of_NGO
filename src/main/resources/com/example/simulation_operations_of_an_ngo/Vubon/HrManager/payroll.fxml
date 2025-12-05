@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_operations_of_an_ngo.Vubon.HrManager.PayrollController">
+   <children>
+      <Label layoutX="155.0" prefHeight="40.0" prefWidth="290.0" text="Payroll &amp; Attendance">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="56.0" prefHeight="26.0" prefWidth="105.0" text="AuditId">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="auditIdtextField" layoutX="164.0" layoutY="56.0" />
+      <Label layoutX="334.0" layoutY="56.0" prefHeight="26.0" prefWidth="105.0" text="auditType">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="8.0" layoutY="99.0" prefHeight="26.0" prefWidth="105.0" text="AuditorName">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="auditNameTextfield" layoutX="164.0" layoutY="99.0" />
+      <ComboBox fx:id="auditTypeCombobox" layoutX="425.0" layoutY="56.0" prefWidth="150.0" />
+      <Label layoutX="327.0" layoutY="99.0" prefHeight="26.0" prefWidth="105.0" text="Audit Date">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="auditDate" layoutX="425.0" layoutY="99.0" />
+      <Label layoutX="8.0" layoutY="139.0" prefHeight="26.0" prefWidth="165.0" text="auditorOrganization">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="auditOrgTextField" layoutX="164.0" layoutY="139.0" />
+      <Button layoutX="327.0" layoutY="139.0" mnemonicParsing="false" onAction="#addbutton" prefHeight="25.0" prefWidth="112.0" text="Add" />
+      <Button layoutX="456.0" layoutY="139.0" mnemonicParsing="false" onAction="#showall" prefHeight="25.0" prefWidth="123.0" text="Show All" />
+      <Button layoutY="6.0" mnemonicParsing="false" onAction="#backButton" prefHeight="33.0" prefWidth="91.0" text="Back" />
+      <TableView fx:id="tableview" layoutY="186.0" prefHeight="212.0" prefWidth="603.0">
+        <columns>
+          <TableColumn fx:id="auditIdColumn" prefWidth="130.6666818857193" text="AuditId" />
+          <TableColumn fx:id="auditNameColumn" prefWidth="123.99996948242188" text="AuditorName" />
+            <TableColumn fx:id="auditTypecolumn" prefWidth="122.00001525878906" text="auditType" />
+            <TableColumn fx:id="auditorgColumn" prefWidth="114.66668701171875" text="auditorOrganization" />
+            <TableColumn fx:id="auditdate" prefWidth="113.99990844726562" text="Audit Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
