@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.SystemAdministor.SystemMonitoringController">
+
+    <children>
+        <Label layoutX="240.0" layoutY="10.0" text="System Performance Monitoring">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+        <Label layoutX="20.0" layoutY="70.0" text="Target Server / Node:"/>
+        <ComboBox fx:id="nodeComboBox" layoutX="150.0" layoutY="66.0" prefWidth="200.0"/>
+        <Button layoutX="370.0" layoutY="66.0" text="Load Metrics" onAction="#handleLoadMetricsButton"/>
+
+        <!-- Simple numeric table as placeholder for charts -->
+        <TableView fx:id="metricsTableView" layoutX="20.0" layoutY="110.0"
+                   prefWidth="760.0" prefHeight="220.0">
+            <columns>
+                <TableColumn fx:id="colMetric" text="Metric" prefWidth="200.0"/>
+                <TableColumn fx:id="colCurrentValue" text="Current Value" prefWidth="150.0"/>
+                <TableColumn fx:id="colAverage" text="Average" prefWidth="150.0"/>
+                <TableColumn fx:id="colMax" text="Max" prefWidth="150.0"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="110.0"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="20.0" layoutY="340.0" text="Alert Thresholds:"/>
+        <Label layoutX="20.0" layoutY="365.0" text="CPU %:"/>
+        <TextField fx:id="cpuThresholdTextField" layoutX="80.0" layoutY="361.0" prefWidth="60.0"/>
+
+        <Label layoutX="160.0" layoutY="365.0" text="Memory %:"/>
+        <TextField fx:id="memoryThresholdTextField" layoutX="240.0" layoutY="361.0" prefWidth="60.0"/>
+
+        <Label layoutX="320.0" layoutY="365.0" text="Bandwidth %:"/>
+        <TextField fx:id="bandwidthThresholdTextField" layoutX="420.0" layoutY="361.0" prefWidth="60.0"/>
+
+        <Button layoutX="500.0" layoutY="361.0" text="Set Thresholds" onAction="#handleSetThresholdsButton"/>
+
+        <Button layoutX="20.0" layoutY="400.0" text="Export Summary Report" onAction="#handleExportReportButton"/>
+
+        <Label layoutX="20.0" layoutY="435.0" text="Activity Log:"/>
+        <Label fx:id="activityLogLabel" layoutX="100.0" layoutY="435.0" prefWidth="680.0"/>
+    </children>
+</AnchorPane>

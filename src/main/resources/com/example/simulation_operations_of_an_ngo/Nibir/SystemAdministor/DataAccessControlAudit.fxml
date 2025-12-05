@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.SystemAdministor.DataAccessControlController">
+
+    <children>
+        <Label layoutX="240.0" layoutY="10.0" text="Data Access Control Audit">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+        <Label layoutX="20.0" layoutY="70.0" text="User Group:"/>
+        <ComboBox fx:id="userGroupComboBox" layoutX="100.0" layoutY="66.0" prefWidth="150.0"/>
+
+        <Label layoutX="270.0" layoutY="70.0" text="Dataset:"/>
+        <ComboBox fx:id="datasetComboBox" layoutX="330.0" layoutY="66.0" prefWidth="200.0"/>
+
+        <Button layoutX="550.0" layoutY="66.0" text="Load Permissions" onAction="#handleLoadPermissionsButton"/>
+
+        <CheckBox fx:id="readCheckBox" layoutX="20.0" layoutY="110.0" text="Read"/>
+        <CheckBox fx:id="writeCheckBox" layoutX="80.0" layoutY="110.0" text="Write"/>
+        <CheckBox fx:id="deleteCheckBox" layoutX="150.0" layoutY="110.0" text="Delete"/>
+
+        <Label layoutX="20.0" layoutY="140.0" text="Additional Rules:"/>
+        <TextArea fx:id="rulesTextArea" layoutX="20.0" layoutY="165.0"
+                  prefWidth="380.0" prefHeight="120.0"/>
+
+        <Button layoutX="20.0" layoutY="295.0" text="ValidateRules" onAction="#handleValidateRulesButton"/>
+        <Button layoutX="130.0" layoutY="295.0" text="ApplySave" onAction="#handleApplySaveButton"/>
+
+
+        <Label layoutX="420.0" layoutY="140.0" text="Access / Modification Log:"/>
+        <TableView fx:id="auditTableView" layoutX="420.0" layoutY="165.0"
+                   prefWidth="360.0" prefHeight="230.0">
+            <columns>
+                <TableColumn fx:id="colTimestamp" text="Time" prefWidth="130.0"/>
+                <TableColumn fx:id="colUser" text="User" prefWidth="100.0"/>
+                <TableColumn fx:id="colAction" text="Action" prefWidth="130.0"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="20.0" layoutY="440.0" text="Status:"/>
+        <Label fx:id="statusLabel" layoutX="70.0" layoutY="440.0" prefWidth="710.0"/>
+    </children>
+</AnchorPane>

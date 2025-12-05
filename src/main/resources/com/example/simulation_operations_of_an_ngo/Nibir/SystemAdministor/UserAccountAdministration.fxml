@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.SystemAdministor.UserAdministrationController">
+
+    <children>
+        <Label layoutX="240.0" layoutY="10.0" text="User Account Administration">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+        <!-- Users List -->
+        <Label layoutX="20.0" layoutY="70.0" text="Users"/>
+        <TableView fx:id="userTableView" layoutX="20.0" layoutY="90.0"
+                   prefWidth="350.0" prefHeight="320.0">
+            <columns>
+                <TableColumn fx:id="colUsername" text="Username" prefWidth="150.0"/>
+                <TableColumn fx:id="colRole" text="Role" prefWidth="100.0"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="100.0"/>
+            </columns>
+        </TableView>
+        <Button layoutX="20.0" layoutY="420.0" text="Add New User" onAction="#handleAddNewUserButton"/>
+
+        <!-- Edit Panel -->
+        <Label layoutX="390.0" layoutY="70.0" text="Selected User:"/>
+        <TextField fx:id="usernameTextField" layoutX="480.0" layoutY="66.0"
+                   prefWidth="200.0" editable="false"/>
+
+        <Label layoutX="390.0" layoutY="110.0" text="Role:"/>
+        <ComboBox fx:id="roleComboBox" layoutX="440.0" layoutY="106.0" prefWidth="140.0"/>
+
+        <Label layoutX="600.0" layoutY="110.0" text="Status:"/>
+        <ComboBox fx:id="statusComboBox" layoutX="650.0" layoutY="106.0" prefWidth="100.0"/>
+
+        <Label layoutX="390.0" layoutY="150.0" text="Permissions:"/>
+        <TextArea fx:id="permissionsTextArea" layoutX="390.0" layoutY="175.0"
+                  prefWidth="360.0" prefHeight="120.0"/>
+
+        <Label layoutX="390.0" layoutY="305.0" text="Password Policy:"/>
+        <TextField fx:id="passwordPolicyTextField" layoutX="500.0" layoutY="301.0"
+                   prefWidth="250.0"/>
+
+        <Button layoutX="390.0" layoutY="340.0" text="Validate Access" onAction="#handleValidateAccessButton"/>
+        <Button layoutX="510.0" layoutY="340.0" text="Save Changes" onAction="#handleSaveChangesButton"/>
+
+        <Label layoutX="390.0" layoutY="380.0" text="Log:"/>
+        <Label fx:id="logLabel" layoutX="430.0" layoutY="380.0" prefWidth="320.0"/>
+    </children>
+</AnchorPane>

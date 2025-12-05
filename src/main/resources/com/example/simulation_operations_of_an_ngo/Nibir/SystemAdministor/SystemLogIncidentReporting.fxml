@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.SystemAdministor.SystemLogIncidentController">
+
+    <children>
+        <Label layoutX="230.0" layoutY="10.0" text="SystemLogIncidentReporting">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+        <Label layoutX="20.0" layoutY="70.0" text="Log Type:"/>
+        <ComboBox fx:id="logTypeComboBox" layoutX="90.0" layoutY="66.0" prefWidth="150.0"/>
+
+        <Label layoutX="260.0" layoutY="70.0" text="From:"/>
+        <DatePicker fx:id="fromDatePicker" layoutX="300.0" layoutY="66.0"/>
+
+        <Label layoutX="460.0" layoutY="70.0" text="To:"/>
+        <DatePicker fx:id="toDatePicker" layoutX="490.0" layoutY="66.0"/>
+
+        <Button layoutX="650.0" layoutY="66.0" text="Filter Logs" onAction="#handleFilterLogsButton"/>
+
+        <TableView fx:id="logTableView" layoutX="20.0" layoutY="110.0"
+                   prefWidth="760.0" prefHeight="230.0">
+            <columns>
+                <TableColumn fx:id="colTime" text="Time" prefWidth="150.0"/>
+                <TableColumn fx:id="colLevel" text="Type" prefWidth="80.0"/>
+                <TableColumn fx:id="colSource" text="Source" prefWidth="150.0"/>
+                <TableColumn fx:id="colMessage" text="Message" prefWidth="380.0"/>
+            </columns>
+        </TableView>
+
+        <Label layoutX="20.0" layoutY="350.0" text="Incident Notes (critical events):"/>
+        <TextArea fx:id="incidentNotesTextArea" layoutX="20.0" layoutY="375.0"
+                  prefWidth="500.0" prefHeight="70.0"/>
+
+        <Button layoutX="540.0" layoutY="375.0" text="Generate Incident Report" onAction="#handleGenerateIncidentReportButton"/>
+        <Button layoutX="540.0" layoutY="410.0" text="Export / Send Report" onAction="#handleExportReportButton"/>
+        <Button layoutX="540.0" layoutY="445.0" text="Archive Logs" onAction="#handleArchiveLogsButton"/>
+
+        <Label layoutX="20.0" layoutY="460.0" text="Status:"/>
+        <Label fx:id="statusLabel" layoutX="70.0" layoutY="460.0" prefWidth="710.0"/>
+    </children>
+</AnchorPane>
+

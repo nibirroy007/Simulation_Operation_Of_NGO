@@ -1,6 +1,9 @@
 module com.example.simulation_operations_of_an_ngo {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.logging;
+    requires javafx.graphics;
+    requires java.desktop;
 
 
     opens com.example.simulation_operations_of_an_ngo to javafx.fxml;

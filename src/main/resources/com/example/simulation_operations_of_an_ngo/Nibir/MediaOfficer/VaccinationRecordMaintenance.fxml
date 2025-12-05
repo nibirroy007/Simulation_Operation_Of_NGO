@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.MediaOfficer.VaccinationController">
+
+    <children>
+        <Label layoutX="230.0" layoutY="10.0" text="Vaccination Records">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+        <Label layoutX="20.0" layoutY="70.0" text="Patient:"/>
+        <ComboBox fx:id="patientComboBox" layoutX="80.0" layoutY="66.0" prefWidth="220.0"/>
+        <Button layoutX="310.0" layoutY="66.0" text="New Beneficiary" onAction="#handleNewBeneficiaryButton"/>
+
+        <Label layoutX="20.0" layoutY="110.0" text="Vaccine Type:"/>
+        <ComboBox fx:id="vaccineTypeComboBox" layoutX="120.0" layoutY="106.0" prefWidth="180.0"/>
+
+        <Label layoutX="320.0" layoutY="110.0" text="Dose No.:"/>
+        <TextField fx:id="doseNumberTextField" layoutX="380.0" layoutY="106.0" prefWidth="50.0"/>
+
+        <Label layoutX="450.0" layoutY="110.0" text="Date Given:"/>
+        <DatePicker fx:id="dateGivenDatePicker" layoutX="530.0" layoutY="106.0"/>
+
+        <Label layoutX="20.0" layoutY="150.0" text="Next Dose:"/>
+        <DatePicker fx:id="nextDoseDatePicker" layoutX="100.0" layoutY="146.0"/>
+
+        <Button layoutX="280.0" layoutY="146.0" text="Save Record" onAction="#handleSaveVaccinationButton"/>
+
+        <TableView fx:id="vaccinationTableView" layoutX="20.0" layoutY="190.0" prefHeight="260.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="colPatient" text="Patient" prefWidth="140.0"/>
+                <TableColumn fx:id="colVaccine" text="Vaccine" prefWidth="160.0"/>
+                <TableColumn fx:id="colDose" text="Dose No." prefWidth="80.0"/>
+                <TableColumn fx:id="colDateGiven" text="Date Given" prefWidth="120.0"/>
+                <TableColumn fx:id="colNextDose" text="Next Dose" prefWidth="120.0"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="140.0"/>
+            </columns>
+        </TableView>
+
+        <Button layoutX="20.0" layoutY="460.0" text="Send Reminder" onAction="#handleSendReminderButton"/>
+        <Button layoutX="130.0" layoutY="460.0" text="View Analytics" onAction="#handleViewAnalyticsButton"/>
+    </children>
+</AnchorPane>

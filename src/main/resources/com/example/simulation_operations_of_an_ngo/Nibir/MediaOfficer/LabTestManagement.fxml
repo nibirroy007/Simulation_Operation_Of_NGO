@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.MediaOfficer.LabManagementController">
+
+    <children>
+        <Label layoutX="250.0" layoutY="10.0" text="Lab Test Management">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+        <Label layoutX="20.0" layoutY="70.0" text="Patient:"/>
+        <ComboBox fx:id="patientComboBox" layoutX="80.0" layoutY="66.0" prefWidth="200.0"/>
+
+        <Label layoutX="310.0" layoutY="70.0" text="Test Category:"/>
+        <ComboBox fx:id="testCategoryComboBox" layoutX="410.0" layoutY="66.0" prefWidth="160.0"/>
+
+        <Label layoutX="20.0" layoutY="110.0" text="Test Name:"/>
+        <TextField fx:id="testNameTextField" layoutX="90.0" layoutY="106.0" prefWidth="200.0"/>
+
+        <Label layoutX="310.0" layoutY="110.0" text="Lab Technician:"/>
+        <ComboBox fx:id="labTechnicianComboBox" layoutX="420.0" layoutY="106.0" prefWidth="200.0"/>
+
+        <Button layoutX="640.0" layoutY="106.0" text="Create order" onAction="#handleCreateLabOrderButton"/>
+
+        <TableView fx:id="labTestTableView" layoutX="20.0" layoutY="150.0" prefHeight="260.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="colPatient" text="Patient" prefWidth="150.0"/>
+                <TableColumn fx:id="colTestName" text="Test Name" prefWidth="150.0"/>
+                <TableColumn fx:id="colCategory" text="Category" prefWidth="120.0"/>
+                <TableColumn fx:id="colTechnician" text="Technician" prefWidth="150.0"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="190.0"/>
+            </columns>
+        </TableView>
+
+        <!-- Actions -->
+        <Button layoutX="20.0" layoutY="430.0" text="ViewResult" onAction="#handleViewResultButton"/>
+        <Button layoutX="120.0" layoutY="430.0" text="ApproveSave" onAction="#handleApproveSaveButton"/>
+        <Button layoutX="250.0" layoutY="430.0" text="NotifyDoctor/Patient" onAction="#handleNotifyButton"/>
+    </children>
+</AnchorPane>

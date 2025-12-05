@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.MediaOfficer.AppointmentController">
+
+    <children>
+        <Label layoutX="230.0" layoutY="10.0" text="Patient Appointments">
+            <font><Font size="26.0"/></font>
+        </Label>
+
+
+        <Label layoutX="20.0" layoutY="70.0" text="Patient:"/>
+        <ComboBox fx:id="patientComboBox" layoutX="90.0" layoutY="66.0" prefWidth="200.0"/>
+
+        <Label layoutX="320.0" layoutY="70.0" text="Doctor:"/>
+        <ComboBox fx:id="doctorComboBox" layoutX="380.0" layoutY="66.0" prefWidth="200.0"/>
+
+        <Label layoutX="20.0" layoutY="110.0" text="Date:"/>
+        <DatePicker fx:id="datePicker" layoutX="90.0" layoutY="106.0"/>
+
+        <Label layoutX="320.0" layoutY="110.0" text="Time:"/>
+        <TextField fx:id="timeTextField" layoutX="380.0" layoutY="106.0" prefWidth="100.0" promptText="HH:MM"/>
+
+        <Label layoutX="20.0" layoutY="150.0" text="Type:"/>
+        <ComboBox fx:id="appointmentTypeComboBox" layoutX="90.0" layoutY="146.0" prefWidth="200.0"/>
+
+        <Button layoutX="320.0" layoutY="146.0" text="New Appointment" onAction="#handleNewAppointmentButton"/>
+        <Button layoutX="440.0" layoutY="146.0" text="Confirm" onAction="#handleConfirmAppointmentButton"/>
+
+
+        <TableView fx:id="appointmentTableView" layoutX="20.0" layoutY="200.0" prefHeight="270.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="colPatient" text="Patient" prefWidth="150.0"/>
+                <TableColumn fx:id="colDoctor" text="Doctor" prefWidth="150.0"/>
+                <TableColumn fx:id="colDate" text="Date" prefWidth="100.0"/>
+                <TableColumn fx:id="colTime" text="Time" prefWidth="80.0"/>
+                <TableColumn fx:id="colType" text="Type" prefWidth="120.0"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="160.0"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

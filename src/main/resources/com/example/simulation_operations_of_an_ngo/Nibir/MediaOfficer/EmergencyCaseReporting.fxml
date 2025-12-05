@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/23"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.MediaOfficer.EmergencyCaseController">
+    <children>
+        <Label layoutX="250.0" layoutY="10.0" text="Emergency Case Reporting">
+            <font><Font size="26.0"/></font>
+        </Label>
+        <Button layoutX="20.0" layoutY="60.0" text="New Emergency Case" onAction="#handleNewCaseButton"/>
+
+        <Label layoutX="20.0" layoutY="100.0" text="Patient Name:"/>
+        <TextField fx:id="patientNameTextField" layoutX="120.0" layoutY="96.0" prefWidth="200.0"/>
+
+        <Label layoutX="340.0" layoutY="100.0" text="Phone:"/>
+        <TextField fx:id="phoneTextField" layoutX="390.0" layoutY="96.0" prefWidth="150.0"/>
+
+        <Label layoutX="20.0" layoutY="140.0" text="Symptoms:"/>
+        <TextArea fx:id="symptomsTextArea" layoutX="120.0" layoutY="136.0" prefWidth="420.0" prefHeight="60.0"/>
+
+        <Label layoutX="560.0" layoutY="140.0" text="Priority:"/>
+        <ComboBox fx:id="priorityComboBox" layoutX="620.0" layoutY="136.0" prefWidth="120.0"/>
+
+        <Button layoutX="620.0" layoutY="176.0" text="Alert Team" onAction="#handleAlertTeamButton"/>
+
+        <Label layoutX="20.0" layoutY="210.0" text="Stabilization Actions:"/>
+        <TextArea fx:id="stabilizationTextArea" layoutX="150.0" layoutY="206.0" prefWidth="480.0" prefHeight="70.0"/>
+
+        <Button layoutX="650.0" layoutY="206.0" text="Save Case" onAction="#handleSaveCaseButton"/>
+        <TableView fx:id="emergencyTableView" layoutX="20.0" layoutY="290.0" prefHeight="190.0" prefWidth="760.0">
+            <columns>
+                <TableColumn fx:id="colCaseId" text="Case ID" prefWidth="80.0"/>
+                <TableColumn fx:id="colPatientName" text="Patient" prefWidth="150.0"/>
+                <TableColumn fx:id="colPriority" text="Priority" prefWidth="90.0"/>
+                <TableColumn fx:id="colStatus" text="Status" prefWidth="120.0"/>
+                <TableColumn fx:id="colTime" text="Time Logged" prefWidth="150.0"/>
+                <TableColumn fx:id="colRemarks" text="Remarks" prefWidth="170.0"/>
+            </columns>
+        </TableView>
+        <Button layoutX="20.0" layoutY="480.0" text="Generate Incident Report" onAction="#handleGenerateIncidentReportButton"/>
+    </children>
+</AnchorPane>
