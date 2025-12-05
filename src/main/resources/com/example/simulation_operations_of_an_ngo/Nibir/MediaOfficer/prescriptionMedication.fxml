@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_operations_of_an_ngo.Nibir.MediaOfficer.MeOfDashboardController">
+    <children>
+
+
+        <Label layoutX="149.0" layoutY="2.0" prefHeight="29.0" prefWidth="313.0" text="Patient Records">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+
+
+        <Label layoutX="1.0" layoutY="59.0" prefHeight="31.0" prefWidth="141.0" text="Patient ID">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <TextField fx:id="patientIdTextField" layoutX="136.0" layoutY="62.0" />
+
+
+        <Label layoutX="292.0" layoutY="59.0" prefHeight="31.0" prefWidth="141.0" text="Full Name">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <TextField fx:id="patientNameTextField" layoutX="435.0" layoutY="62.0" />
+
+
+        <Label layoutX="1.0" layoutY="106.0" prefHeight="31.0" prefWidth="141.0" text="Gender">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="genderComboBox" layoutX="136.0" layoutY="109.0" prefWidth="150.0" />
+
+
+        <Label layoutX="300.0" layoutY="106.0" prefHeight="31.0" prefWidth="141.0" text="Phone">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <TextField fx:id="phoneTextField" layoutX="435.0" layoutY="109.0" />
+
+
+        <Label layoutX="2.0" layoutY="148.0" prefHeight="31.0" prefWidth="141.0" text="Diagnosis">
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Label>
+        <TextField fx:id="diagnosisTextField" layoutX="137.0" layoutY="151.0" />
+
+
+        <Button layoutX="292.0" layoutY="151.0" mnemonicParsing="false" onAction="#savePatientButton" prefHeight="25.0" prefWidth="130.0" text="Save" />
+
+        <Button layoutX="435.0" layoutY="151.0" mnemonicParsing="false" onAction="#showAllPatientsButton" prefHeight="25.0" prefWidth="159.0" text="Show All Patients" />
+
+
+        <TableView fx:id="patientTableView" layoutX="2.0" layoutY="186.0" prefHeight="210.0" prefWidth="592.0">
+            <columns>
+                <TableColumn fx:id="colPatientId" prefWidth="123.0" text="Patient ID" />
+                <TableColumn fx:id="colPatientName" prefWidth="115.0" text="Full Name" />
+                <TableColumn fx:id="colGender" prefWidth="126.0" text="Gender" />
+                <TableColumn fx:id="colPhone" prefWidth="114.0" text="Phone" />
+                <TableColumn fx:id="colDiagnosis" prefWidth="113.0" text="Diagnosis" />
+            </columns>
+        </TableView>
+
+    </children>
+</AnchorPane>
