@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="440.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simulation_operations_of_an_ngo.Vubon.FinanceManager.ManageDonationController">
+   <children>
+      <Label layoutX="143.0" layoutY="5.0" prefHeight="30.0" prefWidth="291.0" text="Manage Donations and Funding">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="45.0" prefHeight="30.0" prefWidth="119.0" text="ProjectId">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="projectIdTextField" layoutX="183.0" layoutY="47.0" />
+      <Label layoutX="374.0" layoutY="45.0" prefHeight="30.0" prefWidth="119.0" text="ProjectName">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="projectNameTextField" layoutX="499.0" layoutY="47.0" />
+      <Label layoutX="14.0" layoutY="89.0" prefHeight="30.0" prefWidth="169.0" text="RequestedAmount">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="requestAmountTextField" layoutX="183.0" layoutY="91.0" />
+      <Label layoutX="336.0" layoutY="89.0" prefHeight="30.0" prefWidth="169.0" text="ApprovedAmount">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="approveAmountTextField" layoutX="505.0" layoutY="91.0" />
+      <Label layoutX="14.0" layoutY="134.0" prefHeight="30.0" prefWidth="169.0" text="Project Status">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="projectStatusTextfield" layoutX="183.0" layoutY="136.0" />
+      <Button layoutX="348.0" layoutY="137.0" mnemonicParsing="false" onAction="#currentStatusbutton" prefHeight="25.0" prefWidth="119.0" text="current Status" />
+      <Button layoutX="485.0" layoutY="137.0" mnemonicParsing="false" onAction="#showallButton" prefHeight="25.0" prefWidth="110.0" text="Show All" />
+      <TableView fx:id="tableview" layoutX="7.0" layoutY="170.0" prefHeight="269.0" prefWidth="659.0">
+        <columns>
+          <TableColumn fx:id="projectIdColumn" prefWidth="132.0" text="Project ID" />
+          <TableColumn fx:id="projectNameColumn" prefWidth="137.99996948242188" text="Project Name" />
+            <TableColumn fx:id="requestamountColumn" prefWidth="132.0" text="Request amount" />
+            <TableColumn fx:id="approveamountColumn" prefWidth="137.3333740234375" text="Approve amount" />
+            <TableColumn fx:id="projectstatusColumn" prefWidth="119.33331298828125" text="Project Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
